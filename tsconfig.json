@@ -1,15 +1,115 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "declaration": true,
-    "removeComments": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "target": "es2017",
-    "sourceMap": true,
-    "outDir": "./dist",
-    "baseUrl": "./",
-    "incremental": true
+    /* Project Options */
+    "allowJs": true,                                                            /* Allow JavaScript files to be imported inside your project, instead of just .ts and .tsx files. */
+    // "checkJs": false,                                                        /* Works in tandem with allowJs. When checkJs is enabled then errors are reported in JavaScript files. */
+    // "composite": false,                                                      /* The composite option enforces certain constraints which make it possible for build tools (including TypeScript itself, under --build mode) to quickly determine if a project has been built yet. */
+    "declaration": true,                                                        /* Generate .d.ts files for every TypeScript or JavaScript file inside your project. */
+    // "declarationMap": false,                                                 /* Generates a source map for .d.ts files which map back to the original .ts source file. */
+    // "downlevelIteration": false,                                             /* Downleveling is TypeScript’s term for transpiling to an older version of JavaScript. */
+    // "importHelpers": false,                                                  /* For certain downleveling operations, TypeScript uses some helper code for operations like extending class, spreading arrays or objects, and async operations. */
+    "incremental": true,                                                        /* Tells TypeScript to save information about the project graph from the last compilation to files stored on disk. */
+    // "isolatedModules": true,                                                 /* While you can use TypeScript to produce JavaScript code from TypeScript code, it’s also common to use other transpilers such as Babel to do this. */
+    // "jsx": "react-jsx",                                                      /* Controls how JSX constructs are emitted in JavaScript files. This only affects output of JS files that started in .tsx files. */
+    // "lib": ["DOM", "DOM.Iterable", "ESNext"],                                /* TypeScript includes a default set of type definitions for built-in JS APIs (like Math), as well as type definitions for things found in browser environments (like document). */
+    "module": "CommonJS",                                                       /* Sets the module system for the program. See the Modules reference page for more information.  */
+    // "noEmit": true,                                                          /* Do not emit compiler output files like JavaScript source code, source-maps or declarations. */
+    "outDir": "./dist",                                                         /* If specified, .js (as well as .d.ts, .js.map, etc.) files will be emitted into this directory. */
+    // "outFile": "./",                                                         /* If specified, all global (non-module) files will be concatenated into the single output file specified. */
+    // "plugins": [],                                                           /* List of language service plugins to run inside the editor. */
+    "removeComments": true,                                                     /* Strips all comments from TypeScript files when converting into JavaScript. Defaults to false. */
+    // "rootDir": "./",                                                         /* The longest common path of all non-declaration input files. If composite is set, the default is instead the directory containing the tsconfig.json file. */
+    "sourceMap": true,                                                          /* Enables the generation of sourcemap files. */
+    "target": "ES2017",                                                         /* The target setting changes which JS features are downleveled and which are left intact. */
+    // "tsBuildInfoFile": ".tsbuildinfo",                                       /* This setting lets you specify a file for storing incremental compilation information as a part of composite projects which enables faster building of larger TypeScript codebases. */
+
+    /* Strict Checks */
+    // "alwaysStrict": false,                                                   /* Ensures that your files are parsed in the ECMAScript strict mode, and emit “use strict” for each source file. */
+    // "noImplicitAny": true,                                                   /* In some cases where no type annotations are present, TypeScript will fall back to a type of any for a variable when it cannot infer the type. */
+    // "noImplicitThis": true,                                                  /* Raise error on ‘this’ expressions with an implied ‘any’ type */
+    "strict": true,                                                             /* The strict flag enables a wide range of type checking behavior that results in stronger guarantees of program correctness. */
+    // "strictBindCallApply": false,                                            /* When set, TypeScript will check that the built-in methods of functions call, bind, and apply are invoked with correct argument for the underlying function */
+    // "strictFunctionTypes": false,                                            /* When enabled, this flag causes functions parameters to be checked more correctly. */
+    // "strictNullChecks": false,                                               /* When strictNullChecks is false, null and undefined are effectively ignored by the language. This can lead to unexpected errors at runtime. */
+    // "strictPropertyInitialization": false,                                   /* When set to true, TypeScript will raise an error when a class property was declared but not set in the constructor. */
+
+    /* Module Resolution */
+    "allowSyntheticDefaultImports": true,                                       /* When set to true, allowSyntheticDefaultImports allows you to write an import like: import React from "react"; */
+    // "allowUmdGlobalAccess": false,                                           /* When set to true, allowUmdGlobalAccess lets you access UMD exports as globals from inside module files. */
+    "baseUrl": "./",                                                            /* Lets you set a base directory to resolve non-absolute module names. */
+    "esModuleInterop": true,                                                    /* By default (with esModuleInterop false or not set) TypeScript treats CommonJS/AMD/UMD modules similar to ES6 modules. */
+    "moduleResolution": "node",                                                 /* Specify the module resolution strategy: 'node' (Node.js) or 'classic' (used in TypeScript before the release of 1.6). */
+    // "paths": {},                                                             /* This lets you declare how TypeScript should resolve an import in your require/imports. */
+    // "preserveSymlinks": false,                                               /* This is to reflect the same flag in Node.js; which does not resolve the real path of symlinks. */
+    // "rootDirs": [],                                                          /* Using rootDirs, you can inform the compiler that there are many “virtual” directories acting as a single root. */
+    // "typeRoots": [],                                                         /* By default all visible ”@types” packages are included in your compilation. If typeRoots is specified, only packages under typeRoots will be included. */
+    // "types": [],                                                             /* By default all visible ”@types” packages are included in your compilation. If types is specified, only packages listed will be included in the global scope. */
+
+    /* Source Maps */
+    // "inlineSourceMap": false,                                                /* When set, instead of writing out a .js.map file to provide source maps, TypeScript will embed the source map content in the .js files. */
+    // "inlineSources": false,                                                  /* When set, TypeScript will include the original content of the .ts file as an embedded string in the source map. */
+    // "mapRoot": "",                                                           /* Specify the location where debugger should locate map files instead of generated locations. */
+    // "sourceRoot": "",                                                        /* Specify the location where a debugger should locate TypeScript files instead of relative source locations. */
+
+    /* Linter Checks */
+    "noFallthroughCasesInSwitch": true,                                         /* Report errors for fallthrough cases in switch statements. */
+    "noImplicitReturns": true,                                                  /* When enabled, TypeScript will check all code paths in a function to ensure they return a value. */
+    // "noPropertyAccessFromIndexSignature": true,                              /* Without this flag, TypeScript will allow you to use the dot syntax to access fields which are not defined */
+    // "noUncheckedIndexedAccess": true,                                        /* TypeScript has a way to describe objects which have unknown keys but known values on an object, via index signatures. */
+    // "noUnusedLocals": true,                                                  /* Report errors on unused local variables. */
+    // "noUnusedParameters": true,                                              /* Report errors on unused parameters in functions. */
+
+    /* Experimental */
+    "emitDecoratorMetadata": true,                                              /* Enables experimental support for emitting type metadata for decorators which works with the module reflect-metadata. */
+    "experimentalDecorators": true,                                             /* Enables experimental support for decorators, which is in stage 2 of the TC39 standardization process. */
+
+    /* Advanced */
+    // "allowUnreachableCode": false,                                           /* These warnings are only about code which is provably unreachable due to the use of JavaScript syntax */
+    // "allowUnusedLabels": false,                                              /* Set to false to disable warnings about unused labels. */
+    // "assumeChangesOnlyAffectDirectDependencies": true,                       /* When this option is enabled, TypeScript will avoid rechecking/rebuilding all truly possibly-affected files, and only recheck/rebuild files that have changed as well as files that directly import them. */
+    // "declarationDir": "",                                                    /* Offers a way to configure the root directory for where declaration files are emitted. */
+    // "disableReferencedProjectLoad": true,                                    /* In multi-project TypeScript programs, TypeScript will load all of the available projects into memory in order to provide accurate results for editor responses which require a full knowledge graph like ‘Find All References’. */
+    // "disableSizeLimit": false,                                               /* To avoid a possible memory bloat issues when working with very large JavaScript projects, there is an upper limit to the amount of memory TypeScript will allocate. Turning this flag on will remove the limit. */
+    // "disableSolutionSearching": false,                                       /* This flag is something you can use to increase responsiveness in large composite projects. */
+    // "disableSourceOfProjectReferenceRedirect": false,                        /* When working with composite TypeScript projects, this option provides a way to go back to the pre-3.7 behavior where d.ts files were used to as the boundaries between modules. In 3.7 the source of truth is now your TypeScript files. */
+    // "emitBOM": false,                                                        /* Controls whether TypeScript will emit a byte order mark (BOM) when writing output files. Some runtime environments require a BOM to correctly interpret a JavaScript files; others require that it is not present. The default value of false is generally best unless you have a reason to change it. */
+    // "emitDeclarationOnly": false,                                            /* Only emit .d.ts files; do not emit .js files. */
+    // "explainFiles": false,                                                   /* Print names of files which TypeScript sees as a part of your project and the reason they are part of the compilation. */
+    // "extendedDiagnostics": false,                                            /* You can use this flag to discover where TypeScript is spending it’s time when compiling. This is a tool used for understanding the performance characteristics of your codebase overall. */
+    "forceConsistentCasingInFileNames": true,                                   /* When this option is set, TypeScript will issue an error if a program tries to include a file by a casing different from the casing on disk */
+    // "generateCpuProfile": "profile.cpuprofile",                              /* This option gives you the chance to have TypeScript emit a v8 CPU profile during the compiler run. The CPU profile can provide insight into why your builds may be slow. */
+    // "importsNotUsedAsValues": "remove",                                      /* This flag works because you can use import type to explicitly create an import statement which should never be emitted into JavaScript. */
+    // "jsxFactory": "React.createElement",                                     /* Changes the function called in .js files when compiling JSX Elements using the classic JSX runtime. */
+    // "jsxFragmentFactory": "React.Fragment",                                  /* Specify the JSX fragment factory function to use when targeting react JSX emit with jsxFactory compiler option is specified, e.g. Fragment. */
+    // "jsxImportSource": "react",                                              /* Declares the module specifier to be used for importing the jsx and jsxs factory functions when using jsx as "react-jsx" or "react-jsxdev" which were introduced in TypeScript 4.1. */
+    // "listEmittedFiles": false,                                               /* Print names of generated files part of the compilation to the terminal. */
+    // "listFiles": false,                                                      /* Print names of files part of the compilation. This is useful when you are not sure that TypeScript has included a file you expected. */
+    // "maxNodeModuleJsDepth": 0,                                               /* The maximum dependency depth to search under node_modules and load JavaScript files. */
+    // "newLine": "lf",                                                         /* Specify the end of line sequence to be used when emitting files: ‘CRLF’ (dos) or ‘LF’ (unix). */
+    // "noEmitHelpers": false,                                                  /* Instead of importing helpers with importHelpers, you can provide implementations in the global scope for the helpers you use and completely turn off emitting of helper functions. */
+    // "noEmitOnError": false,                                                  /* Do not emit compiler output files like JavaScript source code, source-maps or declarations if any errors were reported. */
+    // "noImplicitUseStrict": false,                                            /* By default, when emitting a module file to a non-ES6 target, TypeScript emits a "use strict"; prologue at the top of the file. This setting disables the prologue. */
+    // "noLib": false,                                                          /* Disables the automatic inclusion of any library files. If this option is set, lib is ignored. */
+    // "noResolve": false,                                                      /* By default, TypeScript will examine the initial set of files for import and <reference directives and add these resolved files to your program. */
+    // "noStrictGenericChecks": false,                                          /* TypeScript will unify type parameters when comparing two generic functions. */
+    // "preserveConstEnums": false,                                             /* Do not erase const enum declarations in generated code. */
+    // "reactNamespace": "React",                                               /* Use --jsxFactory instead. Specify the object invoked for createElement when targeting react for TSX files. */
+    "resolveJsonModule": true,                                                  /* Allows importing modules with a ‘.json’ extension, which is a common practice in node projects. */
+    // "skipDefaultLibCheck": false,                                            /* Use --skipLibCheck instead. Skip type checking of default library declaration files. */
+    "skipLibCheck": true,                                                       /* Skip type checking of declaration files. */
+    // "stripInternal": true,                                                   /* Do not emit declarations for code that has an @internal annotation in it’s JSDoc comment. */
+    // "suppressExcessPropertyErrors": false,                                   /* This disables reporting of excess property errors. */
+    // "suppressImplicitAnyIndexErrors": false,                                 /* Turning suppressImplicitAnyIndexErrors on suppresses reporting the error about implicit anys when indexing into objects */
+    // "traceResolution": false,                                                /* When you are trying to debug why a module isn’t being included. You can set traceResolutions to true to have TypeScript print information about its resolution process for each processed file. */
+    // "useDefineForClassFields": false,                                        /* This flag is used as part of migrating to the upcoming standard version of class fields. */
+
+    /* Command Line */
+    // "preserveWatchOutput": false,                                            /* Whether to keep outdated console output in watch mode instead of clearing the screen every time a change happened. */
+    // "pretty": true,                                                          /* Stylize errors and messages using color and context, this is on by default — offers you a chance to have less terse, single colored messages from the compiler. */
+    
+    /* Watch Options */
+    // "fallbackPolling": "fixedPollingInterval",                               /* When using file system events, this option specifies the polling strategy that gets used when the system runs out of native file watchers and/or doesn’t support native file watchers. */
+    // "watchDirectory": "useFsEvents",                                         /* The strategy for how entire directory trees are watched under systems that lack recursive file-watching functionality. */
+    // "watchFile": "useFsEvents",                                              /* The strategy for how individual files are watched. */
   }
 }

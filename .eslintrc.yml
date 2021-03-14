@@ -1,0 +1,97 @@
+# ----------------------------------------------------------------------------------------------------------------------
+#
+#                ___       __                             __
+#     ___  _____/ (_)___  / /___________ __  ______ ___  / /
+#    / _ \/ ___/ / / __ \/ __/ ___/ ___// / / / __ `__ \/ /
+#  _/  __(__  ) / / / / / /_/ /  / /___/ /_/ / / / / / / /
+# (_)___/____/_/_/_/ /_/\__/_/   \___(_)__, /_/ /_/ /_/_/
+#                                     /____/
+#
+# For official documentation, see:
+# https://eslint.org/docs/user-guide/configuring
+#
+# ----------------------------------------------------------------------------------------------------------------------
+
+# ----------------------------------------------------------------------------------------------------------------------
+# PARSER
+#
+# Description:
+# Specify parser that will allow ESLint to lint the code (by default ESLint expects ECMAScript 5 syntax)
+#
+# For official documentation, see:
+# https://eslint.org/docs/user-guide/configuring#specifying-parser-options
+#
+# ----------------------------------------------------------------------------------------------------------------------
+
+parser: '@typescript-eslint/parser'
+
+parserOptions:
+  ecmaVersion: 2020
+  sourceType: 'module'
+  project: tsconfig.json
+
+# ----------------------------------------------------------------------------------------------------------------------
+# CONFIGURATION
+#
+# Description:
+# General configuration options
+#
+# For official documentation, see:
+# https://eslint.org/docs/user-guide/configuring
+#
+# ----------------------------------------------------------------------------------------------------------------------
+
+root: true
+ignorePatterns:
+  - '.eslintrc.yml'
+
+# ----------------------------------------------------------------------------------------------------------------------
+# ENVIRONMENTS
+#
+# Description:
+# Specify environments in which the code was designed to run in
+#
+# For official documentation, see:
+# https://eslint.org/docs/user-guide/configuring#specifying-environments
+#
+# ----------------------------------------------------------------------------------------------------------------------
+
+env:
+  node: true
+  jest: true
+
+#  ---------------------------------------------------------------------------------------------------------------------
+#  PLUGINS
+#
+#  Description:
+#  Specify plugins to load from $CWD/node_modules by default. Plugins can expose additional rules for use in ESLint
+#
+#  For official documentation, see:
+#  https://eslint.org/docs/user-guide/configuring#configuring-plugins
+#
+#  ---------------------------------------------------------------------------------------------------------------------
+
+plugins:
+  - '@typescript-eslint/eslint-plugin'
+
+extends:
+  - 'plugin:@typescript-eslint/recommended'
+  - 'prettier/@typescript-eslint'
+  - 'plugin:prettier/recommended'
+
+# ----------------------------------------------------------------------------------------------------------------------
+# RULES
+#
+# Description:
+# Specify which rules are enabled and at what error level
+#
+# For official documentation, see:
+# https://eslint.org/docs/user-guide/configuring#configuring-rules
+#
+# ----------------------------------------------------------------------------------------------------------------------
+
+rules:
+  '@typescript-eslint/interface-name-prefix': 'off'
+  '@typescript-eslint/explicit-function-return-type': 'off'
+  '@typescript-eslint/explicit-module-boundary-types': 'off'
+  '@typescript-eslint/no-explicit-any': 'off'

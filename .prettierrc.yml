@@ -1,0 +1,26 @@
+# ----------------------------------------------------------------------------------------------------------------------
+#
+#                       __  __  _                                      __
+#      ____  ________  / /_/ /_(_)__  _______________ __  ______ ___  / /
+#     / __ \/ ___/ _ \/ __/ __/ / _ \/ ___/ ___/ ___// / / / __ `__ \/ /
+#  _ / /_/ / /  /  __/ /_/ /_/ /  __/ /  / /  / /___/ /_/ / / / / / / /
+# (_) .___/_/   \___/\__/\__/_/\___/_/  /_/   \___(_)__, /_/ /_/ /_/_/
+#  /_/                                             /____/
+#
+# For official documentation, see:
+# https://prettier.io/docs/en/configuration.html
+#
+# ----------------------------------------------------------------------------------------------------------------------
+
+printWidth: 120
+tabWidth: 2
+useTabs: false
+semi: true
+singleQuote: true
+jsxSingleQuote: true
+trailingComma: 'es5'
+bracketSpacing: true
+jsxBracketSameLine: false
+arrowParens: 'always'
+requirePragma: false
+insertPragma: false

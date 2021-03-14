@@ -1,4 +1,8 @@
 {
-  "extends": "./tsconfig.json",
-  "exclude": ["node_modules", "test", "dist", "**/*spec.ts"]
+  /* File Inclusion */
+  "exclude": ["node_modules", "test", "dist", "**/*spec.ts", "**/*test.ts"],                                            /* Specifies an array of filenames or patterns that should be skipped when resolving include. */
+  "extends": "./tsconfig.json",                                                                                         /* The value of extends is a string which contains a path to another configuration file to inherit from. The path may use Node.js style resolution. */
+  // "files": [],                                                                                                       /* Specifies an allowlist of files to include in the program. An error occurs if any of the files can’t be found */
+  // "include": [],                                                                                                     /* Specifies an array of filenames or patterns to include in the program. These filenames are resolved relative to the directory containing the tsconfig.json file. */
+  // "references": [],                                                                                                  /* Project references are a way to structure your TypeScript programs into smaller pieces. */
 }
