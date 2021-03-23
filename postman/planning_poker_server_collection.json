@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "c6f09ef9-7d77-4a54-880c-7cb0d5d4e011",
+		"name": "Planning Poker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"Uakv4Dj3IGfABbBcAAAC\",\n    \"sender\": \"Lorem Ipsum\",\n    \"role\": \"Developer\",\n    \"eventName\": \"Dolor sit amet\",\n    \"points\": [1, 2, 3, 5, 8, 13, 20, 40, 100],\n    \"maxPlayers\": 7\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/events/create",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"events",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Subscribe",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"Uakv4Dj3IGfABbBcAAAC\",\n    \"sender\": \"Lorem Ipsum\",\n    \"role\": \"Developer\",\n    \"room\": \"5daa94ec-8815-4280-9b4d-b600f3712c6b\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/events/subscribe",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"events",
+						"subscribe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Events",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/events",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vote",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"rwWo3NHM-Pf6wlDoAAAA\",\n    \"sender\": \"Lorem Ipsum\",\n    \"role\": \"Developer\",\n    \"room\": \"dfdad96b-4dfa-4b7b-ad71-9f740386092a\",\n    \"vote\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/events/vote",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"events",
+						"vote"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

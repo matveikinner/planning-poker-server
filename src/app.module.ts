@@ -1,10 +1,15 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { APP_INTERCEPTOR } from '@nestjs/core';
+import { EventsModule } from './events/events.module';
+import { HttpTransformInterceptor } from './shared/interceptors/http-transform.interceptor';
 
 @Module({
-  imports: [],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [EventsModule],
+  providers: [
+    {
+      provide: APP_INTERCEPTOR,
+      useClass: HttpTransformInterceptor,
+    },
+  ],
 })
 export class AppModule {}

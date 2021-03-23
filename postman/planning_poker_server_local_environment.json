@@ -1,0 +1,14 @@
+{
+	"id": "76a6a5f5-f0e8-48ef-904d-da67bdb7e3f2",
+	"name": "[LOCALHOST] Planning Poker Proxy",
+	"values": [
+		{
+			"key": "url",
+			"value": "http://localhost:3001",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2021-03-23T20:18:38.647Z",
+	"_postman_exported_using": "Postman/7.36.5"
+}
